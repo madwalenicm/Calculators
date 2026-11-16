@@ -78,7 +78,7 @@ button:focus-visible{outline:2px solid #6aa6c5;outline-offset:2px}
 <div class="field"><label for="nf-weight">Current weight (kg)</label><input id="nf-weight" type="number" inputmode="decimal" min="0.001" step="0.001" placeholder="e.g. 2.375" oninput="calculateNeonatal()"/><p class="small">Up to 3 decimal places.</p></div>
 <div class="field"><label for="nf-tfi">Total fluid intake (mL/kg/day)</label><select id="nf-tfi" onchange="toggleNeonatalTFI()"><option value="">Select prescribed TFI</option><option value="60">60</option><option value="80">80</option><option value="100">100</option><option value="120">120</option><option value="140">140</option><option value="160">160</option><option value="other">Other — enter manually</option></select></div>
 <div class="field hidden" id="nf-custom-wrap"><label for="nf-custom">Custom TFI (mL/kg/day)</label><input id="nf-custom" type="number" inputmode="decimal" min="0" step="any" placeholder="Enter prescribed TFI" oninput="calculateNeonatal()"/></div>
-<div class="field"><label for="nf-frequency">Feed frequency</label><select id="nf-frequency" onchange="calculateNeonatal()"><option value="2">Every 2 hours (12 feeds/day)</option><option value="3" selected>Every 3 hours (8 feeds/day)</option></select></div>
+<div class="field"><label for="nf-frequency">Feed frequency</label><select id="nf-frequency" onchange="calculateNeonatal()"><option value="2">2-hrly (12 feeds/day)</option><option value="3" selected>3-hrly (8 feeds/day)</option></select></div>
 </div><div class="output neutral" id="nf-total" aria-live="polite">Enter weight and prescribed TFI.</div>
 <div class="row-actions"><button class="action secondary" type="button" onclick="resetNeonatal()">Clear neonatal values</button></div>
 </article>
