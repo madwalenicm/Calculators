@@ -82,14 +82,14 @@ button:focus-visible{outline:2px solid #6aa6c5;outline-offset:2px}
 </div><div class="output neutral" id="nf-total" aria-live="polite">Enter weight and prescribed TFI.</div>
 <div class="row-actions"><button class="action secondary" type="button" onclick="resetNeonatal()">Clear neonatal values</button></div>
 </article>
-<article class="card"><h3>All IV</h3><p class="subtitle">Entire daily volume given intravenously.</p><div id="nf-all-iv" class="output neutral" aria-live="polite">Enter weight and prescribed TFI.</div></article>
-<article class="card"><h3>All feeds</h3><p class="subtitle">Entire daily volume divided between feeds.</p><div id="nf-all-feeds" class="output neutral" aria-live="polite">Enter weight and prescribed TFI.</div></article>
-<article class="card fullwidth"><h3>Combined IV &amp; feeds</h3><div class="fields">
+<article class="card"><h3>All IV</h3><p class="subtitle">If on only IV Fluids</p><div id="nf-all-iv" class="output neutral" aria-live="polite">Enter weight and prescribed TFI.</div></article>
+<article class="card"><h3>All feeds</h3><p class="subtitle">If on only Enteral Feeds</p><div id="nf-all-feeds" class="output neutral" aria-live="polite">Enter weight and prescribed TFI.</div></article>
+<article class="card fullwidth"><h3>Combined IV &amp; Feeds</h3><div class="fields">
 <div class="field full"><label for="nf-mode">Calculate the remaining volume</label><select id="nf-mode" onchange="toggleNeonatalMode()"><option value="iv">Set IV rate → calculate feeds</option><option value="feeds">Set feed volume → calculate IV rate</option></select></div>
 <div class="field" id="nf-iv-wrap"><label for="nf-iv">Set IV rate (mL/hour)</label><input id="nf-iv" type="number" inputmode="decimal" min="0" step="any" placeholder="Enter IV rate" oninput="calculateNeonatal()"/></div>
 <div class="field hidden" id="nf-feed-wrap"><label for="nf-feed">Set feed volume (mL/feed)</label><input id="nf-feed" type="number" inputmode="decimal" min="0" step="any" placeholder="Enter volume per feed" oninput="calculateNeonatal()"/></div>
 </div><div id="nf-combined" class="output neutral" aria-live="polite">Enter weight, prescribed TFI and an IV rate or feed volume.</div>
-<p class="small">Uses the feed frequency selected above. Displayed volumes and rates are rounded to 2 decimal places; daily totals use unrounded values. Account for other fluid sources within the prescribed TFI.</p>
+<p class="small">Uses the feed frequency selected above. For accuracy, volumes are calculated to 2 decimal points, but adjust for clinical use.</p>
 </article></div></section></section>
 <p class="footer">Madwaleni Clinical Calculators 2026/27. Trial version</main>
 </body></html>
